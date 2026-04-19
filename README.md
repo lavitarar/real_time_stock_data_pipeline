@@ -14,8 +14,6 @@
 This project demonstrates an **end-to-end real-time data pipeline** using the **Modern Data Stack**.  
 We capture **live stock market data** from an external API, stream it in real time, orchestrate transformations, and deliver analytics-ready insights — all in one unified project.
 
-![Architecture (1)](https://github.com/user-attachments/assets/6b49eb4d-4bf7-473d-9281-50c20b241760)
-
 
 ---
 
@@ -26,7 +24,6 @@ We capture **live stock market data** from an external API, stream it in real ti
 - **Apache Kafka** → Real-time Streaming  
 - **Python** → Data Fetching & API Integration  
 - **Docker** → Containerization  
-- **Power BI** → Data Visualization  
 
 ---
 
@@ -36,7 +33,6 @@ We capture **live stock market data** from an external API, stream it in real ti
 - Orchestrated ETL workflow using **Airflow**  
 - Transformations using **DBT** inside Snowflake  
 - Scalable cloud warehouse powered by **Snowflake**  
-- Analytics-ready **Power BI dashboards**  
 
 ---
 
@@ -87,8 +83,6 @@ real-time-stocks-pipeline/
 
 ### **2. Live Market Data Producer**
 - Developed **Python producer script** `stock_producer.py` to fetch **real-time stock prices** from the **Finnhub API** using an API key.
-- Streams stock data into Kafka in JSON format.
-- [Producer Code](producer/producer.py)
 
 ---
 
@@ -104,36 +98,24 @@ real-time-stocks-pipeline/
 - Initialized **Apache Airflow** in Docker.
 - Created DAG (`stock_pipeline_dag.py`) to:
   - Load data from MinIO into **Snowflake staging tables** (Bronze).
-  - Schedule automated runs every **1 minute**.
-- [Airflow DAGs](dag/minio_to_snowflake.py)
+  - Schedule automated runs every **@daily**.
+
 
 ---
 
 ### **5. Snowflake Warehouse Setup**
 - Created **Snowflake database, schema, and warehouse**.
 - Defined staging tables for **Bronze → Silver → Gold** layers.
-- SQL scripts available at:
-  - [Snowflake Setup](snowflake/sql_init.sql)
 
 ---
 
 ### **6. DBT Transformations**
 - Configured **DBT project** with Snowflake connection.
 - Models include:
-  - [**Bronze models**](dbt_stocks/models/bronze/bronze_stg_stock_quotes.sql) → raw structured data  
-  - [**Silver models**](dbt_stocks/models/silver/silver_clean_stock_quotes.sql) → cleaned, validated data  
-  - [**Gold models**](dbt_stocks/models/gold) → analytical views (Candlestick, KPI, Tree Map)
-      
-
----
-
-### **7. Power BI Dashboard**
-- Connected **Power BI** to Snowflake (Gold layer) using **Direct Query**.
-- Built:
-  - **Candlestick chart** → stock market patterns  
-  - **Tree chart** → stock price trends  
-  - **gauge charts** → stock volume & total sales breakdown  
-  - **KPI's** → real-time sortable view  
+Bronze models → raw structured data
+Silver models → cleaned, validated data
+Gold models → analytical views (Candlestick, KPI, Tree Map)
+  
 
 ---
 
@@ -142,12 +124,12 @@ real-time-stocks-pipeline/
 - **Snowflake tables (Bronze → Silver → Gold)**  
 - **Transformed analytics models with DBT**  
 - **Orchestrated DAGs in Airflow**  
-- **Power BI dashboard with live insights**  
+
 
 ---
 
 **Author**: *Lavi Tarar* 
 
-**LinkedIn**: [username](www.linkedin.com/in/lavi-tarar) 
+**LinkedIn**: [username](https://www.linkedin.com/in/lavi-tarar)
 
-**Contact**: [Lavitarar134@gmail.com]
+**Contact**: [Lavitarar134@gmail.com](mailto:Lavitarar134@gmail.com)
