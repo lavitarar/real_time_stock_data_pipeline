@@ -90,13 +90,13 @@ real-time-stocks-pipeline/
 - Built **Python consumer script** `stock_consumer.py` to consume streaming data from Kafka.
 - Stored consumed data into **MinIO buckets** (S3-compatible storage).
 - Organized storage into folders for **raw/bronze layer ingestion**.
-- [Consumer Code](consumer/consumer.py)
+
 
 ---
 
 ### **4. Airflow Orchestration**
 - Initialized **Apache Airflow** in Docker.
-- Created DAG (`stock_pipeline_dag.py`) to:
+- Created DAG (`Stock_Market_Stream.py`) to:
   - Load data from MinIO into **Snowflake staging tables** (Bronze).
   - Schedule automated runs every **@daily**.
 
