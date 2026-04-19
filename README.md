@@ -42,7 +42,7 @@ We capture **live stock market data** from an external API, stream it in real ti
 real-time-stocks-pipeline/
 ├── producer/                     # Kafka producer (Finnhub API)
 │   └── producer.py
-├── consumer/                     # Kafka consumer (MinIO sink)
+├── consumer/                     # Kafka consumer (S3)
 │   └── consumer.py
 ├── dbt_stocks/models/
 │   ├── bronze
@@ -56,7 +56,7 @@ real-time-stocks-pipeline/
 │       └── gold_treechart.sql
 ├── dag/
 │   └── minio_to_snowflake.py
-├── docker-compose.yml            # Kafka, Zookeeper, MinIO, Airflow, Postgres
+├── docker-compose.yml            # Kafka, Zookeeper, S3, Airflow, Postgres
 ├── requirements.txt
 └── README.md                     # Documentation
 ```
