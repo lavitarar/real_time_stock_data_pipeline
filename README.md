@@ -146,8 +146,8 @@ real-time-stocks-pipeline/
 
 ---
 
-**Author**: *Jaya Chandra Kadiveti* 
+**Author**: *Lavi Tarar* 
 
-**LinkedIn**: [username](https://www.linkedin.com/in/jayachandrakadiveti/) 
+**LinkedIn**: [username](www.linkedin.com/in/lavi-tarar) 
 
-**Contact**: [datawithjay1@gmail.com](mailto:datawithjay1@gmail.com)
+**Contact**: [Lavitarar134@gmail.com]
