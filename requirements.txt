@@ -1,0 +1,7 @@
+apache-airflow-providers-postgres
+kafka-python
+boto3
+snowflake-connector-python
+dbt-core
+dbt-snowflake
+requests
